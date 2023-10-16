@@ -5,6 +5,11 @@
             <a href="#">Cadastro</a>
         </nav>
     </header>
+    <section class="container">
+        <div class="title">
+            <h1>Logar-se</h1>
+        </div>
+    </section>
 </template>
 
 <script>

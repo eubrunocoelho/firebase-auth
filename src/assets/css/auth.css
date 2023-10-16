@@ -31,8 +31,43 @@
     color: var(--text-primary-color);
 }
 
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 40px 30px 0 30px;
+    width: 100%;
+}
+
+.title {
+    align-items: center;
+    border-bottom: 1px solid var(--gray-primary-color);
+    display: flex;
+    height: 40px;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.title h1 {
+    border-bottom: 4px solid var(--blue-primary-color);
+    color: var(--text-primary-color);
+    font-family: var(--font-exo);
+    font-size: 15px;
+    font-weight: 700;
+    height: 100%;
+    line-height: 40px;
+    padding: 0 30px 0 0;
+}
+
 @media screen and (min-width: 420px) {
     .tab-navigation a {
         font-size: 13px;
+    }
+
+    .container {
+        padding: 40px 50px 0 40px;
+    }
+
+    .title h1 {
+        font-size: 16px;
     }
 }

@@ -1,7 +1,7 @@
 <template>
     <header class="tab-header">
         <nav class="tab-navigation">
-            <a href="#">Login</a>
+            <a href="#" class="active">Login</a>
             <a href="#">Cadastro</a>
         </nav>
     </header>

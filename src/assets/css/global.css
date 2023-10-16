@@ -1,0 +1,27 @@
+:root {
+    --background-color: #fff;
+    --blue-primary-color: #1c95f3;
+    --gray-primary-color: #dbdbdb;
+    --text-disabled-color: #8e9597;
+    --text-primary-color: #363636;
+    --font-exo: 'Exo', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    -webkit-tap-highlight-color: transparent !important;
+    box-sizing: border-box;
+    text-rendering: optimizeLegibility !important;
+}
+
+body {
+    background: var(--background-color);
+}
+
+.app-container {
+    display: flex;
+    justify-content: center;
+    margin: 80px 0 90px 0;
+    width: 100%;
+}

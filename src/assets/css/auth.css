@@ -1,3 +1,19 @@
+a.active.--red {
+    border-bottom: 4px solid var(--red-primary-color) !important;
+}
+
+.title h1.--red {
+    border-bottom: 4px solid var(--red-primary-color) !important;
+}
+
+.form input.--red:focus {
+    border: 1px solid var(--red-primary-color) !important;
+}
+
+.form .btn.--red {
+    background: var(--red-primary-color);
+}
+
 .tab-header {
     height: 56px;
     width: 100%;

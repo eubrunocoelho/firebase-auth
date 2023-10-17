@@ -45,6 +45,10 @@ body {
     color: var(--alert-red-primary-color) !important;
 }
 
+.mb--0 {
+    margin-bottom: 0;
+}
+
 .alert {
     background: var(--alert-blue-tertiary-color);
     border-left: 5px solid var(--alert-blue-secondary-color);

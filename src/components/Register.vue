@@ -1,7 +1,7 @@
 <template>
     <section class="container">
         <div class="title">
-            <h1 class="--red">Cadastre-se</h1>
+            <h1 class="--red">Cadastrar</h1>
         </div>
         <form action="#" class="form">
             <div class="form-control">
@@ -12,7 +12,7 @@
                 <label for="email">Endereço de E-mail</label>
                 <input type="email" id="email" name="email" class="--red" placeholder="Entre com seu endereço de e-mail...">
             </div>
-            <div class="form-control">
+            <div class="form-control mb--0">
                 <label for="password">Senha</label>
                 <input type="password" id="password" name="password" class="--red" placeholder="Entre com sua senha...">
             </div>

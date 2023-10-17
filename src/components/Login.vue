@@ -1,7 +1,7 @@
 <template>
     <section class="container">
         <div class="title">
-            <h1>Logar-se</h1>
+            <h1>Logar</h1>
         </div>
         <form action="#" class="form">
             <div class="form-control">
@@ -15,7 +15,7 @@
             <div class="recovery">
                 <a href="#">Esqueceu sua senha?</a>
             </div>
-            <button type="submit" class="btn">Logar-se</button>
+            <button type="submit" class="btn">Logar</button>
         </form>
         <div class="alert">
             <p>Mensagem padrão.</p>

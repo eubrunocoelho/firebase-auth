@@ -23,6 +23,9 @@
             </div>
             <button type="submit" class="btn">Logar-se</button>
         </form>
+        <div class="alert">
+            <p>Mensagem padrão.</p>
+        </div>
         <div class="alert alert--success">
             <p>Mensagem de sucesso.</p>
         </div>

@@ -11,14 +11,6 @@ export default {
     name: 'App',
     components: {
         AuthComponent
-    },
-    data() {
-        return {
-            hello_world: `${process.env.VUE_APP_HELLO_WORLD}`
-        }
-    },
-    created() {
-        console.log(this.hello_world);
     }
 };
 </script>

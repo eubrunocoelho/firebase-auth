@@ -1,18 +1,18 @@
 <template>
     <main class="app-container">
-        <AuthComponent />
+        <!-- <AuthComponent /> -->
     </main>
 </template>
 
 <script>
-import AuthComponent from './components/Auth';
+// import AuthComponent from './components/Auth';
 
-export default {
-    name: 'App',
-    components: {
-        AuthComponent
-    }
-};
+// export default {
+//     name: 'App',
+//     components: {
+//         AuthComponent
+//     }
+// };
 </script>
 
 <style>

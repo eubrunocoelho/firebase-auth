@@ -3,9 +3,12 @@
         <div class="dashboard-heading">
             <h1><span>#</span>Dashboard</h1>
         </div>
-        <div class="summary">
-            <p>Olá, Bruno Coelho!</p>
-            <button class="btn">Sair</button>
+        <div class="summary" v-if="user.loggedIn">
+            <p>Olá, {{ user.data.displayName }}!</p>
+            <button class="btn" @click.prevent="signOut">Sair</button>
+        </div>
+        <div class="alert alert--danger mt--0" v-else>
+            <p>Você não está logado!</p>
         </div>
     </section>
 </template>

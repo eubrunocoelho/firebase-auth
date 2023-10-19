@@ -6,11 +6,13 @@
         <form action="#" class="form" @submit.prevent="Login">
             <div class="form-control">
                 <label for="email">Endereço de E-mail</label>
-                <input type="text" id="email" name="email" placeholder="Entre com seu endereço de e-mail..." value v-model="email">
+                <input type="text" id="email" name="email" placeholder="Entre com seu endereço de e-mail..." value
+                    v-model="email">
             </div>
             <div class="form-control">
                 <label for="password">Senha</label>
-                <input type="password" id="password" name="password" placeholder="Entre com sua senha..." v-model="password">
+                <input type="password" id="password" name="password" placeholder="Entre com sua senha..."
+                    v-model="password">
             </div>
             <div class="recovery">
                 <a href="#">Esqueceu sua senha?</a>
@@ -24,7 +26,7 @@
 </template>
 
 <script>
-import { ref } from 'vue';
+import { ref, watchEffect } from 'vue';
 import { useStore } from 'vuex';
 import { useRouter } from 'vue-router'
 
@@ -37,6 +39,13 @@ export default {
 
         const store = useStore();
         const router = useRouter();
+
+        watchEffect(() => { 
+            // if (store.getters.user.loggedIn) {
+                // router.push('/');
+                console.log(store.getters.user.loggedIn);
+            // }
+        });
 
         const Login = async () => {
             try {

@@ -16,7 +16,7 @@
 <script>
 import { useStore } from 'vuex';
 import { useRouter } from 'vue-router';
-import { computed } from 'vue';
+import { computed, watchEffect } from 'vue';
 import { auth } from '../firebaseConfig';
 
 export default {
@@ -24,6 +24,13 @@ export default {
     setup() {
         const store = useStore();
         const router = useRouter();
+
+        watchEffect(() => {
+            if (!store.getters.user.loggedIn) {
+                // router.push('/auth');
+                console.log(store.getters.user.loggedIn);
+            }
+        });
 
         auth.onAuthStateChanged(user => {
             store.dispatch('fetchUser', user);
@@ -35,7 +42,7 @@ export default {
 
         const signOut = async () => {
             await store.dispatch('logOut')
-            router.push('/');
+            router.push('/auth');
         };
 
         return { user, signOut };

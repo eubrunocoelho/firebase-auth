@@ -26,7 +26,7 @@
 </template>
 
 <script>
-import { ref, watchEffect } from 'vue';
+import { ref } from 'vue';
 import { useStore } from 'vuex';
 import { useRouter } from 'vue-router'
 
@@ -39,13 +39,6 @@ export default {
 
         const store = useStore();
         const router = useRouter();
-
-        watchEffect(() => { 
-            // if (store.getters.user.loggedIn) {
-                // router.push('/');
-                console.log(store.getters.user.loggedIn);
-            // }
-        });
 
         const Login = async () => {
             try {

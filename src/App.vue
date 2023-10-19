@@ -1,19 +1,8 @@
 <template>
     <main class="app-container">
-        <!-- <AuthComponent /> -->
+        <router-view></router-view>
     </main>
 </template>
-
-<script>
-// import AuthComponent from './components/Auth';
-
-// export default {
-//     name: 'App',
-//     components: {
-//         AuthComponent
-//     }
-// };
-</script>
 
 <style>
 @import './assets/css/reset.css';

@@ -23,7 +23,7 @@ const store = createStore({
         }
     },
     actions: {
-        async register(context, { email, password, name }) {
+        async register(context, { name, email, password }) {
             const response = await createUserWithEmailAndPassword(auth, email, password);
 
             if (response) {

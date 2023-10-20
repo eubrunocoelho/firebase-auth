@@ -6,15 +6,15 @@
         <form action="#" class="form" @submit.prevent="Register">
             <div class="form-control">
                 <label for="name">Nome</label>
-                <input type="text" id="name" name="name" class="--red" placeholder="Entre com seu nome..." value v-model="name">
+                <input type="text" id="name" name="name" class="--red" placeholder="Entre com seu nome..." value v-model="name" />
             </div>
             <div class="form-control">
                 <label for="email">Endereço de E-mail</label>
-                <input type="email" id="email" name="email" class="--red" placeholder="Entre com seu endereço de e-mail..." value v-model="email">
+                <input type="email" id="email" name="email" class="--red" placeholder="Entre com seu endereço de e-mail..." value v-model="email" />
             </div>
             <div class="form-control mb--0">
                 <label for="password">Senha</label>
-                <input type="password" id="password" name="password" class="--red" placeholder="Entre com sua senha..." v-model="password">
+                <input type="password" id="password" name="password" class="--red" placeholder="Entre com sua senha..." v-model="password" />
             </div>
             <button type="submit" class="btn --red">Cadastrar</button>
         </form>
@@ -25,16 +25,16 @@
 </template>
 
 <script>
-import { ref } from 'vue';
-import { useStore } from 'vuex';
-import { useRouter } from 'vue-router';
+import { ref } from "vue";
+import { useStore } from "vuex";
+import { useRouter } from "vue-router";
 
 export default {
-    name: 'RegisterComponent',
+    name: "RegisterComponent",
     setup() {
-        const name = ref('');
-        const email = ref('');
-        const password = ref('');
+        const name = ref("");
+        const email = ref("");
+        const password = ref("");
         const error = ref(null);
 
         const store = useStore();
@@ -42,19 +42,19 @@ export default {
 
         const Register = async () => {
             try {
-                await store.dispatch('register', {
+                await store.dispatch("register", {
                     name: name.value,
                     email: email.value,
-                    password: password.value
+                    password: password.value,
                 });
-                router.push('/dashboard');
-            }
-            catch (err) {
+
+                router.push("/dashboard");
+            } catch (err) {
                 error.value = err.message;
             }
-        }
+        };
 
         return { Register, name, email, password, error };
-    }
+    },
 };
 </script>

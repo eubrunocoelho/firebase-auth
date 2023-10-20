@@ -28,15 +28,20 @@ const store = createStore({
 
             if (response) {
                 await updateProfile(response.user, { displayName: name });
+
                 context.commit('SET_USER', response.user);
-            } else throw new Error('Não foi possível cadastrar o usuário.');
+            } else {
+                throw new Error('Não foi possível cadastrar o usuário.');
+            }
         },
         async logIn(context, { email, password }) {
             const response = await signInWithEmailAndPassword(auth, email, password);
 
             if (response) {
                 context.commit('SET_USER', response.user);
-            } else throw new Error('Falha ao logar.');
+            } else {
+                throw new Error('Falha ao logar.');
+            }
         },
         async logOut(context) {
             await signOut(auth);
@@ -46,12 +51,14 @@ const store = createStore({
         async fetchUser(context, user) {
             context.commit('SET_LOGGED_IN', user !== null);
 
-            if (user)
+            if (user) {
                 context.commit('SET_USER', {
                     displayName: user.displayName,
                     email: user.email
                 });
-            else context.commit('SET_USER', null);
+            } else {
+                context.commit('SET_USER', null);
+            }
         }
     }
 });

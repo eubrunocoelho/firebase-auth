@@ -4,6 +4,26 @@
     </main>
 </template>
 
+<script>
+import { useRouter } from 'vue-router';
+import { auth } from './firebaseConfig';
+
+export default {
+    name: 'AppComponent',
+    setup() {
+        const router = useRouter();
+
+        auth.onAuthStateChanged(user => {
+            if (user) {
+                router.push('/dashboard');
+            } else {
+                router.push('/auth');
+            }
+        });
+    }
+};
+</script>
+
 <style>
 @import './assets/css/reset.css';
 @import './assets/css/global.css';

@@ -47,7 +47,7 @@ export default {
                     email: email.value,
                     password: password.value
                 });
-                router.push('/');
+                router.push('/dashboard');
             }
             catch (err) {
                 error.value = err.message;

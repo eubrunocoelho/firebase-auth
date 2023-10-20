@@ -27,8 +27,8 @@ const store = createStore({
             const response = await createUserWithEmailAndPassword(auth, email, password);
 
             if (response) {
-                context.commit('SET_USER', response.user);
                 await updateProfile(response.user, { displayName: name });
+                context.commit('SET_USER', response.user);
             } else throw new Error('Não foi possível cadastrar o usuário.');
         },
         async logIn(context, { email, password }) {
